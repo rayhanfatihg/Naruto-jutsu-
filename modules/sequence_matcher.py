@@ -18,9 +18,16 @@ else:
     print("                  Run tools/collect_data.py then tools/train_svm.py to train.")
 
 # ── Jutsu combinations ───────────────────────────────────────────────────────
+# Note: "Snake" sign = "Serpent" in our label system
 JUTSU_COMBOS = {
+    # Fire Style: Fireball Jutsu — Snake, Ram, Monkey, Boar, Horse, Tiger
     ("Serpent", "Ram", "Monkey", "Boar", "Horse", "Tiger"): "Fireball Jutsu",
-    ("Monkey", "Dragon", "Rat", "Bird", "Ox", "Serpent", "Dog", "Tiger", "Monkey"): "Chidori",
+
+    # Chidori / Lightning Blade — Ox, Hare, Monkey
+    ("Ox", "Hare", "Monkey"): "Chidori",
+
+    # Summoning Jutsu — Boar, Dog, Bird, Monkey, Ram
+    ("Boar", "Dog", "Bird", "Monkey", "Ram"): "Kuchiyose no Jutsu",
 }
 
 # ── Landmark normalization (mirrors collect_data.py) ─────────────────────────
